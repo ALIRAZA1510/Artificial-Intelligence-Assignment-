@@ -28,3 +28,56 @@ The biggest challenge is that equipment failure is uncertain. Similar sensor rea
 This function balances production speed and machine safety:
 U = w1 × Production Continuity w2 × Failure Risk
 Production Continuity means keeping machines running, while Failure Risk refers to the likelihood and severity of failure. Increasing w2 makes the system more cautious, causing earlier shutdowns to prevent failures, even if it increases downtime. This prioritizes safety over speed in high-risk situations.
+Task 4: Structured Representation.
+
+{
+  "assignment": "AI System Specification",
+  "topic": "PEAS Framework - Predictive Maintenance System",
+
+  "PEAS": {
+    "performance_measures": [
+      "Failure prediction accuracy",
+      "False alarm rate",
+      "MTBF improvement",
+      "Maintenance cost reduction",
+      "Unplanned downtime hours"
+    ],
+
+    "environment": "Industrial factory with connected machines (CNC, motors, pumps). Conditions change due to production schedules, temperature, humidity, electrical noise, vibrations, and human operators.",
+
+    "actuators": [
+      "CMMS alerts and work orders",
+      "Email/SMS notifications",
+      "PLC machine control adjustments",
+      "Dashboard updates"
+    ],
+
+    "sensors": [
+      "Vibration and accelerometers",
+      "Temperature sensors",
+      "Acoustic microphones",
+      "Current and voltage sensors",
+      "Oil quality sensors",
+      "Machine operational data (RPM, load, runtime)"
+    ]
+  },
+
+  "environment_classification": {
+    "visibility": "Partially Observable",
+    "agents": "Multi-agent",
+    "predictability": "Uncertain",
+    "decision_type": "History-based",
+    "dynamics": "Dynamic",
+    "data_type": "Continuous"
+  },
+
+  "critical_analysis": {
+    "main_challenge": "Uncertain failure behavior from similar sensor readings",
+    "solution": "Use probabilistic models (Bayesian, survival analysis) and continuous updates",
+    
+    "utility_function": "U = w1(Production Continuity) - w2(Failure Risk)",
+    
+    "tradeoff": "Higher w2 makes system more safety-focused, causing earlier shutdowns"
+  }
+}
+
