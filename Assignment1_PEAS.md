@@ -21,3 +21,10 @@ Static vs Dynamic	Dynamic	Machine conditions change continuously even while the 
 Type of Data	Continuous	
 Sensor data like vibration, temperature, and pressure changes smoothly over time, not in fixed steps.
 
+Task 3: Critical Analysis
+1. Which dimension is the biggest challenge?
+The biggest challenge is that equipment failure is uncertain. Similar sensor readings can lead to different outcomes, so fixed warning limits are difficult to set. Strict limits cause false alarms, while loose limits miss real failures. Engineers use probabilistic models (like Bayesian and survival analysis) and continuously update them with new data. Internal machine damage also cannot be directly observed, making prediction harder.
+2. Utility Function (Speed vs Safety Trade-off)
+This function balances production speed and machine safety:
+U = w1 × Production Continuity w2 × Failure Risk
+Production Continuity means keeping machines running, while Failure Risk refers to the likelihood and severity of failure. Increasing w2 makes the system more cautious, causing earlier shutdowns to prevent failures, even if it increases downtime. This prioritizes safety over speed in high-risk situations.
